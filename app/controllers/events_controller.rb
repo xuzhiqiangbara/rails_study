@@ -42,6 +42,7 @@ class EventsController < ApplicationController
   def update
     if @event.update(event_params)
       # redirect_to :action => :show, :id => @event
+      #redirect_to 是指到那个action render 是指到那个view
       redirect_to event_url(@event)
       flash[:notice] = "event was successfully updated"
     else
