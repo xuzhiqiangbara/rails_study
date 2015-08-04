@@ -56,10 +56,10 @@ class EventsController < ApplicationController
     redirect_to events_url
   end
 
-# asdfadf
 private
   def event_params
-      params.require(:event).permit(:name, :description)
+      # params.require(:event).permit(:name, :description)
+      params.require(:event).permit(:name, :description, :category_id)
   end
 
   def set_event
