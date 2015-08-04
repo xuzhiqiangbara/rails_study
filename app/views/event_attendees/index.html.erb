@@ -9,5 +9,7 @@
 <% end %>
 
 </ul>
-
-    <%= link_to 'new attendee', new_event_attendee_path(@event) %>
+<dev>
+    <li><%= link_to 'new attendee', new_event_attendee_path(@event) %> </li>
+    <li><%= link_to '<<back_to_events',events_path %></li>
+</dev>

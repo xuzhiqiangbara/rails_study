@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -41,5 +42,38 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+#自分追加したもの -----------------------------------------------------------------
+# group :development do
+#   gem 'capistrano'
+#   gem 'capistrano-bundler'
+#   gem 'capistrano-rbenv'
+# end
+#
+# group :production, :staging do
+#   gem 'unicorn'
+# end
+#
+# group :development do
+#   gem 'capistrano'
+#   gem 'capistrano-rails'
+#   gem 'capistrano-bundler'
+#   gem 'capistrano-rbenv'
+#   gem 'capistrano3-unicorn'
+# end
+#---------------------------------------------
+
+gem 'dotenv-rails' #環境変数を簡単に扱うのに使用
+gem 'sprockets'
+group :development, :test do
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-rails', '~> 1.1.3'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn' #Unicornの起動を簡単に行える
+end
+
+group :production, :staging do
+  gem 'unicorn'
 end
 
