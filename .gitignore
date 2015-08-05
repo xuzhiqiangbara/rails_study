@@ -14,5 +14,7 @@
 /log/*
 !/log/.keep
 /tmp
+/vendor/bundle
+vendor/
 vendor/
 /vendor/*
