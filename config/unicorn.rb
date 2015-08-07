@@ -1,12 +1,9 @@
 #app_path = File.expand_path(File.dirname(__FILE__) + '/..')
 
 app_path = '/home/rails_study/rails_study/demo'
-working_directory app_path + "/current"
-
+working_directory("/home/rails_study/rails_study/demo/current")
 
 worker_processes 2
-
-working_directory app_path
 timeout 30
 
 #listen
