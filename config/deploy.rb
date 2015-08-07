@@ -42,13 +42,13 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all
 
-# after 'deploy:publishing', 'deploy:restart'
-# namespace :deploy do
-#
-#   desc 'Restart application'
-#   task :restart do
-#     invoke 'unicorn:restart'
-#   end
-# end
+after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+end
 
 

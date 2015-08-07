@@ -23,4 +23,4 @@ require 'capistrano/rails/assets'
 require 'capistrano3/unicorn'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.rb').each { |r| import r }
+Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
